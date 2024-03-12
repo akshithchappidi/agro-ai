@@ -13,7 +13,7 @@ with open('targets.pkl', 'rb') as f:
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('home.html')
+    return render_template('./templates/home.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
