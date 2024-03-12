@@ -15,3 +15,5 @@ def predict():
     data = request.get_json()
     prediction = model.predict(np.array(data['input']).reshape(1, -1))
     return {'prediction': targets[int(prediction[0])]}
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
